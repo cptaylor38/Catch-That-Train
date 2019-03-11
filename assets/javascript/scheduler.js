@@ -25,8 +25,6 @@ $("#trainAdd").on("click", function (event) {
     var minutesAway = frequency - remainder;
     var nextTrain = moment().add(minutesAway, "minutes").format("hh:mm a");
 
-    console.log(minutesAway);
-
     var newTrain = {
         name: trainName,
         destination: destination,
