@@ -93,10 +93,6 @@ database.ref().on("child_added", function (snapshot) {
     var $minutesAway = $('<td>');
     $minutesAway.text(minutesAway);
 
-
-
-
-
     $trainRow.append($nameofTrain, $trainDestination, $frequency, $firstTrainTime, $nextTrainTime, $minutesAway);
     $trainTable.append($trainRow);
 
@@ -104,36 +100,4 @@ database.ref().on("child_added", function (snapshot) {
 
 
 
-var tFrequency = 3;
-
-// Time is 3:30 AM
-var firstTime = "03:30";
-var currentTime = moment();
-console.log(currentTime);
-
-// First Time (pushed back 1 year to make sure it comes before current time)
-var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years"); //placing firstTime - 3:30 in moment, passing in as argument
-//in the hour:minute format, then subtracting 1 year to prevent it from going beyond current time?
-console.log(firstTimeConverted);
-
-// Current Time
-var currentTime = moment();
-console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));  //taking the current time and changing it to hour:minute format
-
-// Difference between the times
-var diffTime = moment().diff(moment(firstTimeConverted), "minutes");  //calculating difference between current time/moment and firstTime, 
-//giving back the minute difference
-console.log("DIFFERENCE IN TIME: " + diffTime);
-
-// Time apart (remainder)
-var tRemainder = diffTime % tFrequency;
-console.log(tRemainder);
-
-// Minute Until Train
-var tMinutesTillTrain = tFrequency - tRemainder;
-console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
-
-// Next Train
-var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"));
 
