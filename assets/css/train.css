@@ -80,3 +80,8 @@ body
 {
     background: rgba(231, 235, 231, 0.7); 
 }
+
+#frequencyMinutes
+{
+    text-align: center;
+}

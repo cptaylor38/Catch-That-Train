@@ -81,6 +81,7 @@ database.ref().on("child_added", function (snapshot) {
     $trainDestination.text(destination);
 
     var $frequency = $('<td>');
+    $frequency.attr('id', 'frequencyMinutes');
     $frequency.text(frequency);
 
     var $firstTrainTime = $('<td>');
