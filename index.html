@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/train.css">
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+
+<body>
+    <div class="page-header">
+        <h1 id='header-title'>Catch That Train</h1>
+    </div>
+    <div id='container'>
+        <div class="panel panel-default">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Current Train Schedule</div>
+            <table class="table" id="trainData">
+                <thead>
+                    <tr>
+                        <th scope="col">Train Name:</th>
+                        <th scope="col">Destination:</th>
+                        <th scope="col">Frequency(min):</th>
+                        <th scope="col">First Train Left At:</th>
+                        <th scope="col">Next Arrival At:</th>
+                        <th scope="col">Minutes Away:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class='container'>
+        <div class='panel panel-default militaryConversion'>
+            <div class="panel-heading">Need help with military time?</div>
+            <div id='conversionBox'>
+                <input type="text" id="userTime" placeholder="hh:mm am/pm">
+                <button type='submit' id='timeSubmit'>Convert</button>
+                <p id='timeDisplay'></p>
+            </div>
+        </div>
+    </div>
+
+    <div class='container'>
+        <div class='panel panel-default'>
+            <div class='panel-heading'>Add Train</div>
+            <form>
+                <div class="form-group trainInputPanel">
+                    <label for="trainName">Train Name</label>
+                    <input type="text" class="form-control" id="trainName" placeholder="Train Name">
+                </div>
+                <div class="form-group trainInputPanel">
+                    <label for="destination">Destination</label>
+                    <input type="text" class="form-control" id="destination" placeholder="Destination">
+                </div>
+                <div class="form-group trainInputPanel">
+                    <label for="firstTrainTime">First Train Time (HH:mm - military time)</label>
+                    <input type="text" class="form-control" id="firstTrainTime" placeholder="First Train Time">
+                </div>
+                <div class="form-group trainInputPanel">
+                    <label for="frequency">Frequency(min)</label>
+                    <input type="text" class="form-control" id="frequency" placeholder="Frequency In Minutes">
+                </div>
+                <div class="form-group trainInputPanel">
+                    <button type="submit" class="btn btn-primary" id="trainAdd">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+
+</body>
+<script src="assets/javascript/scheduler.js"></script>
+
+</html>

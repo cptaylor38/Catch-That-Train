@@ -1,0 +1,68 @@
+body
+{
+    background: url('../images/headerPic.jpg');
+    background-size: cover;
+}
+
+#container
+{
+    display: block;
+    margin: 50px;
+}
+
+.militaryConversion
+{
+    text-align: center;
+}
+
+.page-header
+{
+    text-align: center;
+    margin: 0;
+    background: #20364b;
+    color: tan;
+    border-bottom: 10px solid black;
+    border-top: 10px solid black;
+}
+
+#header-title
+{
+    display: block;
+    font-size: 64px;
+    font-weight: bolder;
+    margin-top: 0;
+    padding: 30px;
+    text-shadow:
+        -6px -6px 0 #000,
+		6px -6px 0 #000,
+		-6px 6px 0 #000,
+		6px 6px 0 #000;
+}
+
+#userTime
+{
+    text-align: center;
+}
+
+.trainInputPanel
+{
+    margin: 10px;
+}
+
+#conversionBox
+{
+    margin: 10px;
+}
+
+.panel-default 
+{
+    font-size: 30px;
+    font-weight: bolder;
+    background: rgba(231, 235, 231, 0.7); 
+    border: 3px solid black;
+}
+
+.panel-default .panel-heading
+{
+    background: rgba(231, 235, 231, 0.7); 
+}
